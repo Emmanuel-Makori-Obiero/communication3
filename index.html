@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Account</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8"
+  >
+    <div class="sm:mx-auto w-full max-w-md">
+      <h1
+        class="text-center text-3xl font-extrabold tracking-tight text-gray-950"
+      >
+        CharityMinds
+      </h1>
+      <p class="mt-2 text-center text-sm text-gray-600">
+        Join us today to get started.
+      </p>
+    </div>
+
+    <div class="mt-8 sm:mx-auto w-full max-w-md">
+      <div
+        class="bg-white py-8 px-4 shadow-sm border border-gray-200/80 sm:rounded-xl sm:px-10"
+      >
+        <div
+          id="formAlert"
+          class="hidden mb-6 p-4 rounded-lg text-sm transition-all duration-200"
+        ></div>
+
+        <form id="registerForm" class="space-y-5" novalidate>
+          <div>
+            <label
+              for="firstName"
+              class="block text-sm font-medium text-gray-700"
+              >First Name</label
+            >
+            <div class="mt-1">
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                class="appearance-none block w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                placeholder="John"
+              />
+            </div>
+            <p
+              class="hidden mt-1.5 text-xs text-red-600"
+              id="firstNameError"
+            ></p>
+          </div>
+
+          <div>
+            <label
+              for="lastName"
+              class="block text-sm font-medium text-gray-700"
+              >Last Name</label
+            >
+            <div class="mt-1">
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                class="appearance-none block w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                placeholder="Doe"
+              />
+            </div>
+            <p
+              class="hidden mt-1.5 text-xs text-red-600"
+              id="lastNameError"
+            ></p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email Address</label
+            >
+            <div class="mt-1">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="appearance-none block w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                placeholder="you@example.com"
+              />
+            </div>
+            <p class="hidden mt-1.5 text-xs text-red-600" id="emailError"></p>
+          </div>
+
+          <div>
+            <label for="gender" class="block text-sm font-medium text-gray-700"
+              >Gender</label
+            >
+            <div class="mt-1">
+              <select
+                id="gender"
+                name="gender"
+                required
+                class="block w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+              >
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <p class="hidden mt-1.5 text-xs text-red-600" id="genderError"></p>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              id="submitBtn"
+              class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Create Account
+            </button>
+          </div>
+        </form>
+
+        <div class="mt-6 border-t border-gray-200 pt-6 text-center text-sm">
+          <span class="text-gray-600">Want to see all accounts?</span>
+          <a
+            href="dashboard.html"
+            class="font-medium text-blue-600 hover:underline ml-1"
+            >View Dashboard</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
